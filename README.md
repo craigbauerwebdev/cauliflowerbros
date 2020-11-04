@@ -1,2 +1,1 @@
-# cauliflowerbros
-NextJS app for a vegan friendly Recipe site.
+This is a starter template for [Learn Next.js](https://nextjs.org/learn).
