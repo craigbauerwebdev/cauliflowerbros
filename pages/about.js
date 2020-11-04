@@ -13,13 +13,13 @@ const About = ({recipes}) => {
       </Head>
 
       <main>
-        <h1 className="title">
+        {/*<h1 className="title">
           About Cailiflower Brothers
-        </h1>
-{/*
+        </h1>*/}
+
         {recipes.map((recipe)=> {
           return <p>{recipe.title.rendered}</p>
-        })}*/}
+        })}
       </main>
     </div>
   )
@@ -29,7 +29,7 @@ const About = ({recipes}) => {
 // It won't be called on client-side, so you can even do
 // direct database queries. See the "Technical details" section.
 
-/*export async function getStaticProps() {
+export async function getStaticProps() {
   const res = await fetch('http://localhost:3000/api/recipes')
   const recipes = await res.json();
 
@@ -39,7 +39,8 @@ const About = ({recipes}) => {
     props: {
       recipes,
     },
+    revalidate: 1, //to update props
   }
-}*/
+}
 
 export default About;

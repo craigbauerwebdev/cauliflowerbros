@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 
-const Slider = ({img})=> {
+const Slider = ({img, text})=> {
 
 	const styles = {
 		backgroundImage: `url(${img})`,
@@ -11,7 +11,7 @@ const Slider = ({img})=> {
     return (
         <div className="hero-banner" style={styles}>
         	<div className="info">
-            	<h1>Get Super Charged on Plants</h1>
+            	<h1>{text}</h1>
             </div>
         </div>
     );

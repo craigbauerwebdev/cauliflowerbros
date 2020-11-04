@@ -6,6 +6,12 @@ header {
 	padding: 15px;
 	border-bottom: 1px gray solid;
 	background: #fff;
+	z-index: 99;
+	/* display: flex;
+	justify-content: space-between */
+	a {
+		cursor: pointer;
+	}
 	img {
 		height: 80px;
 	}

@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import bannerData from "../util/getBannerData";
 
 const Layout = ({children})=> {
+    // Get Banner Data for Specific Page
     const heroBannerData = bannerData();//
     
     console.log(heroBannerData);

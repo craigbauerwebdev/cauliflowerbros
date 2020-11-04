@@ -5,10 +5,12 @@ import MainNav from "./MainNav";
 const Header = ({children})=> {
     return (
         <header>
-            <img height="100" src="/images/cauliflower-bros-logo.jpg" />
+        	<Link href="/">
+        		<a>
+            		<img height="100" src="/images/cauliflower-bros-logo.jpg" />
+            	</a>
+            </Link>
             <MainNav />
-            {/*<Link href="/"><a>Home</a></Link>
-            <Link href="/about"><a>About</a></Link>*/}
         </header>
     );
 }

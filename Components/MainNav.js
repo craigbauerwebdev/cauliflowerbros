@@ -5,8 +5,16 @@ const MainNav = ({children})=> {
     return (
         <nav>
             <ul>
-            	<li>Home!</li>
-            	<li>About</li>
+            	<li>
+            		<Link href="/">
+            			<a>Home</a>
+            		</Link>
+            	</li>
+            	<li>
+            		<Link href="/about">
+            			<a>About</a>
+            		</Link>
+            	</li>
             	<li>Recipes</li>
             	<li>Go Vegan</li>
             	<li>Blog</li>
