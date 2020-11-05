@@ -32,7 +32,7 @@ const About = ({recipes}) => {
 // It won't be called on client-side, so you can even do
 // direct database queries. See the "Technical details" section.
 
-export async function getStaticProps() {
+/*export async function getStaticProps() {
   const res = await fetch('http://localhost:3000/api/recipes')
   const recipes = await res.json();
 
@@ -44,6 +44,6 @@ export async function getStaticProps() {
     },
     revalidate: 1, //to update props
   }
-}
+}*/
 
 export default About;
