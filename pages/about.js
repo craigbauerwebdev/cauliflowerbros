@@ -16,10 +16,13 @@ const About = ({recipes}) => {
         {/*<h1 className="title">
           About Cailiflower Brothers
         </h1>*/}
+        <p>Our story coming soon</p>
 
-        {recipes.map((recipe)=> {
+        {/*
+          {recipes.map((recipe)=> {
           return <p>{recipe.title.rendered}</p>
         })}
+      */}
       </main>
     </div>
   )
