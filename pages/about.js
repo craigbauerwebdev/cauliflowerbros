@@ -1,15 +1,16 @@
 import Head from 'next/head'
 import useSWR from 'swr'
 
-  /* const dev = process.env.NODE_ENV === 'development';
-    const server = dev ? 'http://localhost:3000' : 'https://mydomain.com/'; */
+  const dev = process.env.NODE_ENV === 'development';
+  const server = dev ? 'http://localhost:3000' : 'https://mydomain.com';
+  const dynamicUrl = `${server}/api/recipes`;
 
   //console.log("SERVER: ", dev, " ", server);
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+const fetcher = (dynamicUrl) => fetch(dynamicUrl).then((res) => res.json());
 
 const About = () => {
-  const { data, error } = useSWR('/api/recipes', fetcher);
+  const { data, error } = useSWR(dynamicUrl, fetcher);
   //console.log(error);
   console.log(data);
 
@@ -34,9 +35,8 @@ const About = () => {
         </h1>*/}
         <p>Our story coming soon</p>
 
-        
           {data.map((recipe)=> {
-            return <p>{recipe.name}</p>
+            return <p>{recipe.title.rendered}</p>
           })}
      
       </main>

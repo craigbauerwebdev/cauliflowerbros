@@ -10,10 +10,10 @@ export default function handler(req, res) {
         .then((response) => {
             //console.log(response);
             
-            //res.end(JSON.stringify(response.data));
+            res.end(JSON.stringify(response.data));
 
-            res.statusCode = 200
+            /* res.statusCode = 200
             res.setHeader('Content-Type', 'application/json')
-            res.end(JSON.stringify({ name: 'John Doe' }))
-        })
+            res.end(JSON.stringify([{ name: 'Test Data' }, { name: 'more data'}])) */
+        });
 }
