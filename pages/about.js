@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import useSWR from 'swr'
 
-//const dev = process.env.NODE_ENV === 'development';
-  //const server = dev ? 'http://localhost:3000' : 'https://mydomain.com/';
+  /* const dev = process.env.NODE_ENV === 'development';
+    const server = dev ? 'http://localhost:3000' : 'https://mydomain.com/'; */
 
   //console.log("SERVER: ", dev, " ", server);
 
@@ -13,7 +13,7 @@ const About = () => {
   //console.log(error);
   console.log(data);
 
-  if (error) return <div>Failed to load</div>
+  if (error) return <div>Failed to load data</div>
   if (!data) return <div>Loading...!!!</div>
 
 
