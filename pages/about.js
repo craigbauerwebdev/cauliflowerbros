@@ -36,7 +36,7 @@ const About = () => {
 
         
           {data.map((recipe)=> {
-            return <p>{recipe.title.rendered}</p>
+            return <p>{recipe.name}</p>
           })}
      
       </main>
