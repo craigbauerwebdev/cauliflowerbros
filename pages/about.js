@@ -1,6 +1,22 @@
 import Head from 'next/head'
+import useSWR from 'swr'
 
-const About = ({recipes}) => {
+//const dev = process.env.NODE_ENV === 'development';
+  //const server = dev ? 'http://localhost:3000' : 'https://mydomain.com/';
+
+  //console.log("SERVER: ", dev, " ", server);
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
+
+const About = () => {
+  const { data, error } = useSWR('/api/recipes', fetcher);
+  //console.log(error);
+  console.log(data);
+
+  if (error) return <div>Failed to load</div>
+  if (!data) return <div>Loading...!!!</div>
+
+
   return (
     <div className="container">
       <Head>
@@ -18,11 +34,11 @@ const About = ({recipes}) => {
         </h1>*/}
         <p>Our story coming soon</p>
 
-        {/*
-          {recipes.map((recipe)=> {
-          return <p>{recipe.title.rendered}</p>
-        })}
-      */}
+        
+          {data.map((recipe)=> {
+            return <p>{recipe.title.rendered}</p>
+          })}
+     
       </main>
     </div>
   )
@@ -32,8 +48,13 @@ const About = ({recipes}) => {
 // It won't be called on client-side, so you can even do
 // direct database queries. See the "Technical details" section.
 
-/*export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/recipes')
+/* export async function getStaticProps() {
+
+  const dev = process.env.NODE_ENV === 'development';
+  const server = dev ? 'http://localhost:3000' : 'https://cauliflowerbrothers.com/';
+  console.log("SERVER: ", server);
+
+  const res = await fetch(`${server}/api/recipes`)
   const recipes = await res.json();
 
   // By returning { props: posts }, the Blog component
@@ -44,6 +65,6 @@ const About = ({recipes}) => {
     },
     revalidate: 1, //to update props
   }
-}*/
+} */
 
 export default About;
