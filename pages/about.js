@@ -9,7 +9,7 @@ import useSWR from 'swr'
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const About = () => {
-  const { data, error } = useSWR('/api/test', fetcher);
+  const { data, error } = useSWR('/api/recipes', fetcher);
   //console.log(error);
   console.log(data);
 
@@ -35,7 +35,7 @@ const About = () => {
         <p>Our story coming soon</p>
 
           {data.map((recipe)=> {
-            return <p>{recipe.name}</p>
+            return <p>{recipe.title.rendered}</p>
           })}
      
       </main>
