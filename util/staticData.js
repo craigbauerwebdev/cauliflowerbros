@@ -17,6 +17,8 @@ homePageFeatures = [
 ]
 
 export default (
-    mainNav,
-    homePageFeatures,
+    {
+        mainNav,
+        homePageFeatures,
+    }
 )
