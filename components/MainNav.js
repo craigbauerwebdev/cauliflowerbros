@@ -11,11 +11,11 @@ const MainNav = ({children})=> {
             		</Link>
             	</li>
             	<li>
-            		<Link href="/about">
-            			<a>About</a>
+            		<Link href="/recipes">
+            			<a>Recipes</a>
             		</Link>
             	</li>
-            	<li>Recipes</li>
+            	<li>About Us</li>
             	<li>Go Vegan</li>
             	<li>Blog</li>
             	<li>Contact</li>

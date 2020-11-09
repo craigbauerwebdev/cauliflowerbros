@@ -14,9 +14,9 @@ const getBannerData = (text, height, img) => {
         bd.text = "Let's Get Supercharged on Plants";
         //bd.banner = true
         break;
-      case "/about":
+      case "/recipes":
         bd.img = "/images/slides/whole2-foods-cauliflower-bros.jpg";
-        bd.text = "About Cauliflower Brothers"
+        bd.text = "Vegan Recipes"
         break;
       default:
       	bd.banner = false;
