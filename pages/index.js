@@ -1,10 +1,10 @@
 import useSWR from 'swr'
-//import Person from '../components/Person'
+import RecipeCard from '../components/RecipeCard'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Index() {
-  const { data, error } = useSWR('/api/people', fetcher);
+  const { data, error } = useSWR('/api/recipes', fetcher);
 
   console.log(data);
 
@@ -14,9 +14,9 @@ export default function Index() {
 
   return (
     <ul>
-      {data.map((p, i) => {
-        {/* <Person key={i} person={p} /> */}
-        return <h1>{p.title.rendered}</h1>
+      {data.map((r, i) => {
+        return <RecipeCard key={i} recipe={r} />
+        //return <h1>{p.title.rendered}</h1>
       })}
     </ul>
   )

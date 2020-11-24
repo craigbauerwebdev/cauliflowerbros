@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import Person from '../components/Person'
+import RecipeCard from '../components/RecipeCard'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -14,8 +14,8 @@ export default function Recipes() {
 
   return (
     <ul>
-      {data.map((p, i) => {
-        return <Person key={i} person={p} />
+      {data.map((r, i) => {
+        return <RecipeCard key={i} recipe={r} />
         //return <h1>{p.title.rendered}</h1>
       })}
     </ul>
